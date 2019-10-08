@@ -1,7 +1,10 @@
 <div class="col-xs-12">
 
-  <app-appareil *ngFor="let mAppareil of mAppareils; let i = index" [appareilName]="mAppareil.name"
-    [appareilStatus]="mAppareil.status" [index]="i">
+  <app-appareil *ngFor="let mAppareil of mAppareils; let i = index"
+    [appareilName]="mAppareil.name"
+    [appareilStatus]="mAppareil.status" 
+    [index]="i"
+    [id]="mAppareil.id">
   </app-appareil>
   <button class="btn btn-success" (click)="onAllumer()">Tout allumer</button>
   <button class="btn btn-danger" (click)="onEteindre()">Tout éteindre</button>

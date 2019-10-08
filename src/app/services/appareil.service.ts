@@ -2,15 +2,27 @@ export class AppareilService {
   
     appareils = [
         {
+          id:1,
           name: 'Iphone',
           status: false
         },
         {
+          id:2,
           name: 'Xbox One',
           status: true
         },
         
       ];
+
+
+      getAppareilById(idTarget:number){
+        const appareil = this.appareils.find(
+          (appareilObject) => {
+            return appareilObject.id ===idTarget;
+          }
+        );
+        return appareil;
+      }
 
 
       switchOnAll() {
