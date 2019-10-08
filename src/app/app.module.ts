@@ -11,6 +11,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthComponent } from './components/auth/auth.component';
 import { AuthService } from './services/auth.service';
 import { SingleAppareilComponent } from './components/single-appareil/single-appareil.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 const appRoutes: Routes = [
@@ -18,6 +19,8 @@ const appRoutes: Routes = [
   {path: "", component: AppareilViewComponent},
   {path:"auth", component:AuthComponent},
   {path: "appareils/:id", component: SingleAppareilComponent},
+  {path:"not-found", component: NotFoundComponent},
+  {path:"**", redirectTo:"not-found"}
 ];
 
 
@@ -27,7 +30,8 @@ const appRoutes: Routes = [
     AppareilComponent,
     AppareilViewComponent,
     AuthComponent,
-    SingleAppareilComponent
+    SingleAppareilComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
